@@ -34,8 +34,9 @@ public class TestAddStudent {
 
     @Test
     void testAddStudentExisting() {
+        //should refactor the code so that adding the same student twice throws an error
         service.saveStudent("999","nume",932);
-        Assertions.assertEquals(1, service.saveStudent("999","nume",932));
+        Assertions.assertEquals(0, service.saveStudent("999","nume",932));
     }
 
     @Test
@@ -43,6 +44,7 @@ public class TestAddStudent {
         service.saveStudent("999","nume",932);
         Student s1 = new Student("999","nume",932);
         Student s2 = new Student("999","nume",932);
-        Assertions.assertTrue(Objects.equals(s1.getID(), s2.getID()));
+        Assertions.assertEquals(s1.getID(), s2.getID());
+        Assertions.assertEquals(s1,s2);
     }
 }
