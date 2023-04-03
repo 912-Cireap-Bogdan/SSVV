@@ -1,8 +1,7 @@
 import domain.Nota;
 import domain.Student;
 import domain.Tema;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import repository.NotaXMLRepository;
 import repository.StudentXMLRepository;
 import repository.TemaXMLRepository;
@@ -11,8 +10,8 @@ import validation.NotaValidator;
 import validation.StudentValidator;
 import validation.TemaValidator;
 import validation.Validator;
+import static org.junit.Assert.assertEquals;
 
-import java.util.Objects;
 
 public class TestAddStudent {
 
@@ -27,24 +26,24 @@ public class TestAddStudent {
     Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
 
     @Test
-    void testAddStudentSuccess() {
+    public void testAddStudentSuccess() {
 
-        Assertions.assertEquals(0, service.saveStudent("999","nume",932));
+        assertEquals(0, service.saveStudent("999","nume",932));
     }
 
     @Test
-    void testAddStudentExisting() {
+    public void testAddStudentExisting() {
         //should refactor the code so that adding the same student twice throws an error
         service.saveStudent("999","nume",932);
-        Assertions.assertEquals(0, service.saveStudent("999","nume",932));
+        assertEquals(0, service.saveStudent("999","nume",932));
     }
 
     @Test
-    void checkExistingStudent() {
+    public void  checkExistingStudent() {
         service.saveStudent("999","nume",932);
         Student s1 = new Student("999","nume",932);
         Student s2 = new Student("999","nume",932);
-        Assertions.assertEquals(s1.getID(), s2.getID());
-        Assertions.assertEquals(s1,s2);
+        assertEquals(s1.getID(), s2.getID());
+        assertEquals(s1,s2);
     }
 }
