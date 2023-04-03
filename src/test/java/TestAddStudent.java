@@ -29,6 +29,39 @@ public class TestAddStudent {
     public void testAddStudentSuccess() {
 
         assertEquals(0, service.saveStudent("999","nume",932));
+        
+        //TH code
+        //ec
+        assertEquals(0, service.saveStudent("23","Mihai",932));
+        
+        assertEquals(1, service.saveStudent("a","Mihai",932));
+        
+        assertEquals(0, service.saveStudent("10","Mihai",932));
+        assertEquals(1, service.saveStudent("10","Mihai",932));
+        
+        assertEquals(1, service.saveStudent("11","",932));
+        
+        assertEquals(1, service.saveStudent("999","nume",-932));
+        
+        // bva
+        assertEquals(0, service.saveStudent("0","Mihai",931));
+        assertEquals(0, service.saveStudent("1","Mihai",931));
+        
+        assertEquals(1, service.saveStudent("MAX_INT","Mihai",931));
+        assertEquals(1, service.saveStudent("MAX_INT+1","Mihai",931));
+        
+        assertEquals(1, service.saveStudent("-1","Mihai",931));
+        
+        
+        assertEquals(0, service.saveStudent("0","a",931));
+        assertEquals(1, service.saveStudent("1","",931));
+        
+        
+        assertEquals(0, service.saveStudent("0","Mihai",931));
+        assertEquals(0, service.saveStudent("1","Mihai",111));
+        assertEquals(0, service.saveStudent("2","Mihai",112));
+        assertEquals(1, service.saveStudent("0","Mihai",941));
+        
     }
 
     @Test
