@@ -10,6 +10,11 @@
         <Deadline>7</Deadline>
         <Startline>6</Startline>
     </tema>
+    <tema ID="a">
+        <Descriere>tema random</Descriere>
+        <Deadline>9</Deadline>
+        <Startline>8</Startline>
+    </tema>
     <tema ID="2">
         <Descriere>XML</Descriere>
         <Deadline>8</Deadline>
@@ -21,6 +26,11 @@
         <Startline>7</Startline>
     </tema>
     <tema ID="999">
+        <Descriere>tema random</Descriere>
+        <Deadline>9</Deadline>
+        <Startline>8</Startline>
+    </tema>
+    <tema ID="-999">
         <Descriere>tema random</Descriere>
         <Deadline>9</Deadline>
         <Startline>8</Startline>
