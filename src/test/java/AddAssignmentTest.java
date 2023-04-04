@@ -1,3 +1,4 @@
+
 import domain.Nota;
 import domain.Student;
 import domain.Tema;
@@ -12,7 +13,7 @@ import validation.TemaValidator;
 import validation.Validator;
 import static org.junit.Assert.assertEquals;
 
-public class TestAddAssignment {
+public class AddAssignmentTest {
 
     Validator<Student> studentValidator = new StudentValidator();
     Validator<Tema> temaValidator = new TemaValidator();
@@ -25,7 +26,7 @@ public class TestAddAssignment {
     Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
 
     @Test
-    public void testAddAssignment(){
+    public void TestAddAssignment(){
 
         //test case 1 id >0 and a number
         assertEquals(0,service.saveTema("999","tema random",9,8));
@@ -35,7 +36,7 @@ public class TestAddAssignment {
 
     }
     @Test
-    public void testAddAssignmentDescription(){
+    public void TestAddAssignmentDescription(){
 
         //test case 2 description must not be empty
         assertEquals(1,service.saveTema("999","",9,8));
@@ -44,7 +45,7 @@ public class TestAddAssignment {
     }
 
     @Test
-    public void testAddAssignmentDeadline(){
+    public void TestAddAssignmentDeadline(){
         // deadline > startline
         assertEquals(1,service.saveTema("999","tema random",7,8));
         assertEquals(0,service.saveTema("999","tema random",9,8));

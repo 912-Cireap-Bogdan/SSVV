@@ -4,6 +4,14 @@
         <Nume>numeupdate</Nume>
         <Grupa>932</Grupa>
     </student>
+    <student ID="23">
+        <Nume>Mihai</Nume>
+        <Grupa>932</Grupa>
+    </student>
+    <student ID="a">
+        <Nume>Mihai</Nume>
+        <Grupa>932</Grupa>
+    </student>
     <student ID="2">
         <Nume>Maria</Nume>
         <Grupa>222</Grupa>
@@ -18,6 +26,10 @@
     </student>
     <student ID="999">
         <Nume>student1</Nume>
+        <Grupa>932</Grupa>
+    </student>
+    <student ID="10">
+        <Nume>Mihai</Nume>
         <Grupa>932</Grupa>
     </student>
 </Entitati>
