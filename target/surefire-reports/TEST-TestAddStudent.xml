@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestAddStudent" time="0.052" tests="3" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestAddStudent" time="0.352" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\STEPON~1\AppData\Local\Temp\surefire9322768657215301127\surefirebooter9223719789709373469.jar C:\Users\StepOnMeNagatoro-san\AppData\Local\Temp\surefire9322768657215301127 2023-04-04T17-41-21_256-jvmRun1 surefire9604483238408037691tmp surefire_05516528383221200199tmp"/>
+    <property name="sun.java.command" value="C:\Users\STEPON~1\AppData\Local\Temp\surefire15492909916119427934\surefirebooter5190939348425862615.jar C:\Users\StepOnMeNagatoro-san\AppData\Local\Temp\surefire15492909916119427934 2023-04-25T16-38-31_354-jvmRun1 surefire9876851775078237955tmp surefire_06059001533248165605tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\StepOnMeNagatoro-san\Documents\SSVV\MavenProject\SSVV\target\test-classes;C:\Users\StepOnMeNagatoro-san\Documents\SSVV\MavenProject\SSVV\target\classes;C:\Users\StepOnMeNagatoro-san\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\StepOnMeNagatoro-san\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\STEPON~1\AppData\Local\Temp\surefire9322768657215301127\surefirebooter9223719789709373469.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\STEPON~1\AppData\Local\Temp\surefire15492909916119427934\surefirebooter5190939348425862615.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17+35-LTS-2724"/>
@@ -57,11 +57,12 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testAddStudentExisting" classname="TestAddStudent" time="0"/>
+  <testcase name="testAddStudentWithGroupToBig" classname="TestAddStudent" time="0.011"/>
+  <testcase name="testAddStudentExisting" classname="TestAddStudent" time="0.001"/>
   <testcase name="checkExistingStudent" classname="TestAddStudent" time="0"/>
-  <testcase name="testAddStudentSuccess" classname="TestAddStudent" time="0.012">
-    <failure message="expected:&lt;0&gt; but was:&lt;1&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<0> but was:<1>
-	at TestAddStudent.testAddStudentSuccess(TestAddStudent.java:39)
-]]></failure>
-  </testcase>
+  <testcase name="testAddStudentWithInvalidName" classname="TestAddStudent" time="0.012"/>
+  <testcase name="testAddStudentWithNullID" classname="TestAddStudent" time="0.025"/>
+  <testcase name="testAddStudentWithGroupToSmall" classname="TestAddStudent" time="0.024"/>
+  <testcase name="testAddStudentWithEmptyName" classname="TestAddStudent" time="0.055"/>
+  <testcase name="testAddStudentWithEmptyID" classname="TestAddStudent" time="0.011"/>
 </testsuite>

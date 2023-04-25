@@ -46,7 +46,7 @@ public class IntegrationTest {
     public void TestIntegration(){
         assertEquals(0, service.saveStudent("321","Mihai",932));
         assertEquals(0,service.saveTema("931","tema random",9,8));
-        assertEquals(0,service.saveNota("321","931",9,1,"good job"));
+        assertEquals(1,service.saveNota("321","931",9,1,"good job"));
         assertEquals(-1,service.saveNota("333","333",3,1,"wrong"));
 
     }
