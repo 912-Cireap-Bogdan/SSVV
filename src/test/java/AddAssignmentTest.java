@@ -52,5 +52,15 @@ public class AddAssignmentTest {
         assertEquals(0,service.saveTema("999","tema random",7,7));
 
     }
+    
+    @Test
+    public void TestAddAssignmentValidGroup(){
+        assertEquals(0,service.saveTema("931","tema random",9,8));
+    }
+    
+    @Test
+    public void TestAddAssignmentNullGroup(){
+        assertEquals(1,service.saveTema("","tema random",9,8));
+    }
 
 }
