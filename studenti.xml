@@ -16,6 +16,10 @@
         <Nume>Maria</Nume>
         <Grupa>222</Grupa>
     </student>
+    <student ID="321">
+        <Nume>Mihai</Nume>
+        <Grupa>932</Grupa>
+    </student>
     <student ID="3">
         <Nume>num</Nume>
         <Grupa>932</Grupa>

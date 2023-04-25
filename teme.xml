@@ -20,10 +20,20 @@
         <Deadline>8</Deadline>
         <Startline>7</Startline>
     </tema>
+    <tema ID="321">
+        <Descriere>tema random</Descriere>
+        <Deadline>9</Deadline>
+        <Startline>8</Startline>
+    </tema>
     <tema ID="3">
         <Descriere>gui</Descriere>
         <Deadline>9</Deadline>
         <Startline>7</Startline>
+    </tema>
+    <tema ID="931">
+        <Descriere>tema random</Descriere>
+        <Deadline>9</Deadline>
+        <Startline>8</Startline>
     </tema>
     <tema ID="999">
         <Descriere>tema random</Descriere>
