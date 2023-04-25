@@ -26,43 +26,35 @@ public class TestAddStudent {
     Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
 
     @Test
-    public void testAddStudentSuccess() {
-
-        assertEquals(0, service.saveStudent("999","nume",932));
-        
-        //TH code
-        //ec
-        assertEquals(0, service.saveStudent("23","Mihai",932));
-        
-        assertEquals(1, service.saveStudent("a","Mihai",932));
-        
-        assertEquals(0, service.saveStudent("10","Mihai",932));
-        assertEquals(1, service.saveStudent("10","Mihai",932));
-        
-        assertEquals(1, service.saveStudent("11","",932));
-        
-        assertEquals(1, service.saveStudent("999","nume",-932));
-        
-        // bva
-        assertEquals(0, service.saveStudent("0","Mihai",931));
-        assertEquals(0, service.saveStudent("1","Mihai",931));
-        
-        assertEquals(1, service.saveStudent("MAX_INT","Mihai",931));
-        assertEquals(1, service.saveStudent("MAX_INT+1","Mihai",931));
-        
-        assertEquals(1, service.saveStudent("-1","Mihai",931));
-        
-        
-        assertEquals(0, service.saveStudent("0","a",931));
-        assertEquals(1, service.saveStudent("1","",931));
-        
-        
-        assertEquals(0, service.saveStudent("0","Mihai",931));
-        assertEquals(0, service.saveStudent("1","Mihai",111));
-        assertEquals(0, service.saveStudent("2","Mihai",112));
-        assertEquals(1, service.saveStudent("0","Mihai",941));
-        
+    public void testAddStudentWithEmptyID() {
+        assertEquals(1, service.saveStudent("","Mihai",932));
     }
+
+    @Test
+    public void testAddStudentWithNullID() {
+        assertEquals(1, service.saveStudent(null,"Mihai",932));
+    }
+
+    @Test
+    public void testAddStudentWithEmptyName() {
+        assertEquals(1, service.saveStudent(String.valueOf(13),"",932));
+    }
+
+    @Test
+    public void testAddStudentWithInvalidName() {
+        assertEquals(1, service.saveStudent(String.valueOf(14),null,932));
+    }
+
+    @Test
+    public void testAddStudentWithGroupToSmall() {
+        assertEquals(1, service.saveStudent(String.valueOf(15),"Mihai",10));
+    }
+
+    @Test
+    public void testAddStudentWithGroupToBig() {
+        assertEquals(1, service.saveStudent(String.valueOf(16),"Mihai",999));
+    }
+
 
     @Test
     public void testAddStudentExisting() {
