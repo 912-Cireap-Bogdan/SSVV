@@ -28,7 +28,7 @@ public class Service {
         Student student = new Student(id, nume, grupa);
         Student result = studentXmlRepo.save(student);
 
-        if (result == null) {
+        if (result != null) {
             return 1;
         }
         return 0;
@@ -38,7 +38,7 @@ public class Service {
         Tema tema = new Tema(id, descriere, deadline, startline);
         Tema result = temaXmlRepo.save(tema);
 
-        if (result == null) {
+        if (result != null) {
             return 1;
         }
         return 0;
@@ -59,7 +59,7 @@ public class Service {
             Nota nota = new Nota(new Pair(idStudent, idTema), valNota, predata, feedback);
             Nota result = notaXmlRepo.save(nota);
 
-            if (result == null) {
+            if (result != null) {
                 return 1;
             }
             return 0;
